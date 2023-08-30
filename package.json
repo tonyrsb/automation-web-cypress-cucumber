@@ -1,0 +1,31 @@
+{
+  "name": "automation-web-cypress-cucumber",
+  "author": "tonyrsb",
+  "license": "ISC",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cypress-open-ui": "npx cypress open",
+    "cypress-record": "npx cypress run --record --key 7ae7b0b8-435d-428d-8a4c-adb14bfe8f8f",
+    "clean-reports": "rm -rf cypress/reports/results/*.json cypress/reports/features cypress/reports/index.html cypress/reports/* cypress/screenshots/* cypress/videos/*",
+    "cypress": "npm run clean-reports & npx cypress run --browser chrome"
+  },
+ 
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": "cypress/support/step_definitions/**/*.js",
+    "nonGlobalStepDefinitions": false,
+    "filterSpecs": true,
+    "omitFiltered": true
+   },
+
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^18.0.4",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress": "^12.17.4",
+    "dotenv": "^16.3.1",
+    "save-dev": "^0.0.1-security"
+  }
+}
