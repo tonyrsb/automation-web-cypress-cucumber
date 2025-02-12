@@ -71,4 +71,4 @@ $ npm run cypress -- -e TAGS='not @skip'            | to exclude @skip tag
 $ npm run cypress -- -e TAGS='' --browser chrome    | to run all tests with launch browser
 ```
 
-# Let's make TRUSTED and IMPACTFUL tests!! Good Luck!!!
+# Let's make TRUSTED and IMPACTFUL tests!!! Good Luck!!!
